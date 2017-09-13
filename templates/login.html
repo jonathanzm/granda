@@ -1,0 +1,51 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+	<style media="screen">
+		form{
+			width: 25%;
+			margin: 0 auto;
+
+		}
+
+		
+			
+		}
+
+	</style>
+
+  
+  <form method="post">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    
+
+   <!-- <form  mane="login" method="post" action="" >
+					<fieldset>
+					
+						<section>
+							<label for="usermanme"> Usuario<span class="required">*</span></label>
+							<input type="text"  name="username"  />
+						</section>
+
+						<section>
+							<label for="password">Contraseña<span class="required">*</span></label>
+							<input  type="password" name="password"  />
+						
+						</section>
+						<section>
+							<input type="submit"  value="Login" />
+							<h3> <a href="{% url 'registro' %}"> Registrate Aquí</h3>
+
+						</section>-->
+
+    <input type="submit"  value="Login" />
+    <h3> <a href="{% url 'registro' %}"> Registrate Aquí</h3>
+    
+  </form>
+{% endblock %}

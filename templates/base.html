@@ -1,0 +1,42 @@
+{% extends 'aplicacion/base.html' %}
+{% load staticfiles %}
+{% block title %}
+ENCOFRADOS 
+{% endblock title %}
+
+{% block contenido1 %}
+  <style media="screen">
+  
+  
+
+   
+
+  </style>
+
+
+
+  <meta charset="utf-8">
+  
+<body>
+  <header>
+    <form  mane="login" method="post" action="" >
+        <h1>Iniciar  Sesion</h1>
+        {% if user.is_authenticated %}
+        Hola {{ user.username }}!
+        <a href="{% url 'logout' %}">Salir</a>
+        {% else %}
+        <a href="{% url 'login' %}">login</a>
+        {% endif %}
+   </form>
+  </header>
+  <hr>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  <hr>
+  <footer>
+   
+  </footer>
+</body>
+{% endblock %}

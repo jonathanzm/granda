@@ -1,0 +1,14 @@
+{% extends 'Aplicacion1/base.html' %}
+{% load staticfiles %}
+{% block title %}
+Nuevo Usuario
+{% endblock title%}
+
+{% block contenido1 %}
+		<form id='formulario' method='post' action=''> {% csrf_token %}
+			<table>{{formulario}}</table>
+			<p><input type='submit' value='Resgistar' /></p>
+			
+		</form>
+
+{% endblock %}
